@@ -14,7 +14,7 @@ public class ShoppingList {
         DynamicArrayList ShoppingList = new DynamicArrayList();
 
         //create scanner object to read user input
-
+boolean done = true;
     Scanner sc = new Scanner(System.in);
 //asking user how many entires they want in their shopping list
 System.out.println("how many entries would you like in your list ");
@@ -35,7 +35,7 @@ for(int i = 0;i<ShoppingList.Size();i++){
     System.out.println("product "+ (i+1 )+" :" + ShoppingList.get(i));
 }
 // Offer a menu of actions for the user to interact with the shopping list
-while (true) {
+while (done) {
     System.out.println("\nMenu:");
     System.out.println("1. Add item");
     System.out.println("2. Find item");
@@ -84,9 +84,10 @@ while (true) {
             for (int i = 0;i<ShoppingList.Size();i++)
            System.out.println((i+1)+":"+ShoppingList.clone());
            case 5:
+               done= false;
            // Exit program
            System.out.println("Exiting program...");
-           System.exit(0);
+
            break;
        default:
            System.out.println("Invalid choice. Please choose a valid action.");

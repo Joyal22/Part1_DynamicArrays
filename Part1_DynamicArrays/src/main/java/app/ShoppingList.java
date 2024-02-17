@@ -20,10 +20,12 @@ public class ShoppingList {
 System.out.println("how many entries would you like in your list ");
 int entryNum = sc.nextInt();
 
+sc.nextLine();
 //propmt the user to enter each entry and add it to shopping list
 
 for(int i = 0; i<entryNum; i++){
-    System.out.println("enter product "+ i+1 +" :");
+    System.out.println("enter product "+" :");
+
     String product = sc.nextLine();
     ShoppingList.add(product);
 }

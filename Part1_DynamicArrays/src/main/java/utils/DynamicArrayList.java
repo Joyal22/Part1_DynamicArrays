@@ -65,8 +65,9 @@ public class DynamicArrayList {
             growing();
         }
         arr[count] = word;// Add the new element at the end
+        count++;
         return true;
-
+        
     }
  // Method to grow the array when it's full
     private void growing() {
